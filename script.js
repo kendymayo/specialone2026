@@ -22,10 +22,8 @@ function showError() {
   form.classList.add("show");
 }
 
-function showForm() {
-  const form = document.getElementById("form");
-  form.classList.remove("hidden");
-  form.classList.add("show");
+function rebootProcess() {
+  window.location.href = "rebootPage.html";
 }
 
 let progress = 0;
@@ -43,8 +41,9 @@ const interval = setInterval(() => {
     clearInterval(dotsInterval);
     clearInterval(photoInterval);
     showLastPhoto();
-    document.getElementById("mainText").innerText = "Re-boot selesaiii, pencet starttt!!!";
+    document.getElementById("mainText").innerText = "Yuhuuu re-boot selesaiii, let's starttt!!!";
     document.getElementById("dots").innerText = "";
+    document.getElementById("getStart").classList.remove("hidden");
   }
 
 }, 300);
@@ -52,11 +51,11 @@ const interval = setInterval(() => {
 const caption = document.getElementById("rebootcaption");
 
 const texts = [
-  "Collecting memories",
-  "Syncing heart modules",
-  "Compiling happiness",
-  "Loading happiness for you",
-  "Almost ready"
+  "Re-boot in progress : Collecting memories",
+  "Re-boot in progress : Syncing heart modules",
+  "Re-boot in progress : Compiling happiness",
+  "Re-boot in progress : Loading happiness for you",
+  "Re-boot in progress : Almost ready"
 ];
 
 const mainText = document.getElementById("mainText");
@@ -141,6 +140,8 @@ function showLastPhoto() {
 //   }, 300);
 // }
 
+
+
 function generateFlowers() {
   const container = document.getElementById("flowers-container");
   const total = 15;
@@ -189,11 +190,45 @@ function generateFlowers() {
     // flower.style.transform = `rotate(${rotate}deg)`;
 
     container.appendChild(flower);
+
+    
+   setTimeout(() => {
+        showForm();
+   }, 3000);
   }
 }
 
-function rebootProcess() {
-  window.location.href = "rebootPage.html";
+function showForm() {
+  const form = document.getElementById("form");
+  form.classList.remove("hidden");
+  form.classList.add("show");
+}
+
+function showGreetingWords() {
+   window.location.href = "greetingPage.html";
+}
+
+generateFlowers();
+
+function showClue() {
+  const gift = document.getElementById("gift");
+
+  // aktifin animasi zoom
+  gift.classList.add("active");
+
+  // tunggu animasi selesai (~500ms)
+  setTimeout(() => {
+    gift.classList.add("hidden");
+    document.getElementById("cluePopup").classList.remove("hidden");
+  }, 500);
+}
+
+function closeClue() {
+  document.getElementById("cluePopup").classList.add("hidden");
+
+  // balikin ukuran kado
+   document.getElementById("gift").classList.remove("hidden");
+  document.getElementById("gift").classList.remove("active");
 }
 
 //window.onload = generateFlowers;
