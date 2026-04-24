@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div id="flowers-container"></div>
+    <div class="container">
+
+        <!-- Step 1: Amplop -->
+        <div id="envelope" onclick="openEnvelope()">
+            <i class="fa-solid fa-envelope"></i>
+        </div>
+
+        <div id="envelopeopen" class="hidden">
+            <i class="fa-solid fa-envelope-open-text"></i>
+        </div>
+
+        <div id="wordingenvelope">
+            <h2>Ada Surat Nich Buat Istrikooo</h2>
+            <h2>Cobaaa Bukaaa</h2>
+        </div>
+
+        <!-- Step 2: Error -->
+        <div id="errorpage" class="hidden">
+            <div class="error-message">
+                <h1>ALERT!!!</h1>
+                <h2>SOMETHING WENT WRONG</h2>
+                <p>
+                    Hmmm keknya perlu re-boot duls ini seng <br>
+                    Tolong pencet tombol dibawah yak istrikooo
+                </p>
+                <button class="reboot" onclick="rebootProcess()">RE-BOOT</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Form -->
+        <!-- <div id="form" class="hidden">
+            <div class="form-card">
+                <h2>Pesan untuk kamu 💌</h2>
+
+                <input type="text" placeholder="Nama kamu..." />
+                <textarea placeholder="Tulis sesuatu di sini..."></textarea>
+
+                <button>Kirim ❤️</button>
+            </div>
+        </div> -->
+
+        <!-- Step 2: Teaser -->
+        <!-- <div id="teaser" class="hidden" onclick="showMessage()">
+            <h2>Ada sesuatu buat kamu...</h2>
+            <p>(klik lagi ya 👀)</p>
+        </div> -->
+
+        <!-- Step 3: Isi -->
+        <!-- <div id="message" class="hidden">
+            <h1>Happy Birthday ❤️</h1>
+            <p>
+                Selamat ulang tahun ya sayangku 🥺<br><br>
+                Terima kasih sudah selalu ada di hidup aku.<br>
+                Semoga kita terus bareng sampai tua nanti 🤍
+            </p>
+        </div> -->
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>

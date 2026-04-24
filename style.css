@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(180deg, #d4f1d4, #5dcf47, #c1f0dc);
+  color: #c6f1ca;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.afterEnvelopeOpenPhase1 {
+  background: linear-gradient(180deg, #ff0000, #f76868, #ff0000);
+  color: #ff0000;
+}
+
+.afterEnvelopeOpenPhase2 {
+  background: linear-gradient(180deg, #d4f1d4, #ffc9ea, #c1f0dc);
+  color: #d1accb;
+}
+/* .container {
+  margin-top: 20%;
+} */
+
+i {
+  font-size: 80px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* i:hover {
+  transform: scale(1.7);
+} */
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+  animation: fadeIn 1.5s;
+}
+
+.dissapear {
+    animation: fadeOut 0.8s;
+}
+
+@keyframes fadeOut {
+  from { transform: scale(1); opacity: 100; }
+  to { transform: scale(5); opacity: 0;}
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 🌸 BUNGA JATUH */
+/* .flower {
+  position: fixed;
+  top: -10px;
+  font-size: 24px;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+} */
+
+#flowers-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.flower-img {
+  position: absolute;
+  /* width: 80px; bisa lo adjust */
+  opacity: 0;
+  animation: bloom 1.5s ease forwards;
+}
+
+/* 🌸 efek bloom */
+@keyframes bloom {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
+
+/* Wrapper error page*/
+.error-message{
+  background: white;
+  padding: 30px;
+  width: 500px;
+  border-radius: 20px;
+  /* 🔥 biar keliatan “ngangkat” */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.error-message{
+  backdrop-filter: blur(5px);
+}
+
+.error-message{
+  animation: fadeIn 2s;
+}
+
+.error-message{
+  position: relative;
+  z-index: 10;
+}
+
+button.reboot{
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #ff0000, #000a06);
+  color: #d6d6d6;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  /* shadow biar “ngangkat” */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease;
+}
+
+
+body.rebootpage {
+  margin: 0;
+  font-family: sans-serif;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column; /* 🔥 ini penting */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+
+  color: #2f4f4f;
+}
+
+.loading-container {
+  position: relative;
+  width: 500px;
+  height: 20px;
+  margin: 20px auto;
+
+  background: #e0f2e9;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* bar jalan */
+.loading-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(135deg, #a8e6cf, #81d4b1);
+  border-radius: 20px;
+
+  transition: width 0.1s linear;
+}
+
+/* 🔥 teks center di container (bukan di bar) */
+#progressText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 12px;
+  font-weight: bold;
+  color: #2f4f4f;
+
+  z-index: 2; /* biar di atas bar */
+}
+
+.photo-frame {
+  width: 90vw;        /* 🔥 hampir full layar HP */
+  max-width: 500px;   /* masih aman di desktop */
+
+  aspect-ratio: 1 / 1;
+  margin: 20px auto;
+
+  border-radius: 24px;
+  overflow: hidden;
+
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+#photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Wrapper form page */
+/* #form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.form-card {
+  background: white;
+  padding: 30px;
+  width: 300px;
+  border-radius: 20px;
+
+  /* 🔥 biar keliatan “ngangkat” */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+
+  text-align: center;
+}
+
+/* Input & textarea */
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+/* Button */
+.form-card button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #a8e6cf; /* hijau soft */
+  color: #2f4f4f;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-card button:hover {
+  background: #8edac0;
+}
+
+.form-card {
+  backdrop-filter: blur(5px);
+}
+
+.form-card {
+  animation: fadeIn 2s;
+}
+
+.form-card {
+  position: relative;
+  z-index: 10;
+}
